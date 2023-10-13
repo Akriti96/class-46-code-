@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vr Game Character</title>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js">
+        </script>
+    </head>
+    <body>
+        <a-scene>
+           <a-plane height="200" width="200" color="grey" rotation="-90 0 0"></a-plane>
+
+                <a-entity id="head" position="0 0.37 0">
+                    <a-box id="face" color="tomato" depth="0.23" height="0.16" width="0.23"></a-box>
+                   <a-cylinder id="left-eye" color="blue" height="0.12" radius="0.02" rotation="0 90 90" position="-0.06 0 0.06" geometry="thetaLength:180"></a-cylinder>
+                    <a-cylinder id="right-eye" color="blue" height="0.12" radius="0.02" rotation="0 90 90" position="0.06 0 0.06" geometry="thetaLength:180"></a-cylinder>
+                    <a-box id="helmet" position="0 0.05 0" color="red" depth="0.22" height="0.2" width="0.22"></a-box>
+                    <a-box id="helmet-edge-1" position="0 0.07 0" color="blue" depth="0.24" height="0.04" width="0.29"></a-box>
+                    <a-box id="helmet-edge-2" position="0 0.07 0.02" color="blue" depth="0.24" height="0.2" width="0.04"></a-box>
+                    <a-box id="horns" position="0 0.13 0" color="#e5e8ce" depth="0.03" height="0.03" width="0.3">
+                        <a-box position="0.15 0.026 0" color="#e5e8ce" depth="0.03" height="0.08" width="0.03"></a-box>
+                        <a-box position="-0.15 0.026 0" color="#e5e8ce" depth="0.03" height="0.08" width=" 0.03"></a-box>
+                    </a-box>
+                </a-entity>
+
+
+            <a-box id="body" color="yellow" depth="0.18" height="0.17" width="0.17" position="0 0.194 0">
+                <a-entity id="right-arm" position="0.12 0.05 0"  position="0 0 0" rotation="0 0 0">
+                    <a-sphere color=" #585965" radius="0.05" position="0 0 0" rotation="0 0 0">
+                      <a-box depth=" 0.04" height="0.16" width=" 0.04" position="0 -0.07935 0"></a-box>
+                      <a-box color=" #7f4e0b" depth=" 0.05" height="0.01" width=" 0.05" position="0 -0.11892 0"></a-box>
+                    </a-sphere>
+                  </a-entity>
+                 <a-entity id="right-leg" position="0.06 -0.1 0" animation="property: rotation; from: -60 0 0; to: 10 0 0; dir: alternate; loop: true; easing: linear; dur: 250;">
+                        <a-box depth=" 0.04" height="0.2" width=" 0.04" position="0 -0.05 0" scale="1 0.81 1">
+                        <a-box color=" #640c0c" depth=" 0.04" height="0.05" width=" 0.04" position="0 -0.12 0"></a-box>
+                </a-entity>
+
+                <a-entity id="right-arm" position="-0.12 0.05 0"  position="0 0 0" rotation="0 0 0">
+                    <a-sphere color=" #585965" radius="0.05" position="0 0 0" rotation="0 0 0">
+                      <a-box depth=" 0.04" height="0.16" width=" 0.04" position="0 -0.07935 0"></a-box>
+                      <a-box color=" #7f4e0b" depth=" 0.05" height="0.01" width=" 0.05" position="0 -0.11892 0"></a-box>
+                    </a-sphere>
+                  </a-entity>
+                 <a-entity id="right-leg" position="-0.06 -0.1 0" animation="property: rotation; from: -60 0 0; to: 10 0 0; dir: alternate; loop: true; easing: linear; dur: 250;">
+                        <a-box depth=" 0.04" height="0.2" width=" 0.04" position="0 -0.05 0" scale="1 0.81 1">
+                        <a-box color=" #640c0c" depth=" 0.04" height="0.05" width=" 0.04" position="0 -0.12 0"></a-box>
+                </a-entity>
+                
+            </a-box>     
+        </a-scene>
+    </body>
